@@ -2124,112 +2124,6 @@
             "time": "2015-05-19T11:00:43+00:00"
         },
         {
-            "name": "monastirevrf/esb-bundle",
-            "version": "dev-feature/update_to_symfony_5",
-            "source": {
-                "type": "git",
-                "url": "ssh://git@git.prp.ru:7999/web/esb-bundle.git",
-                "reference": "7748286107b6a403423b1463e810efbb48e08484"
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.3",
-                "jms/serializer-bundle": "^3.5",
-                "php": "^7.1.3",
-                "sensio/framework-extra-bundle": "^5.5",
-                "stomp-php/stomp-php": "^4.3",
-                "symfony/config": "^5",
-                "symfony/expression-language": "^5",
-                "symfony/lock": "^5",
-                "symfony/monolog-bundle": "^3",
-                "symfony/process": "^5"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^7",
-                "symfony/browser-kit": "^4"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "master"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Monastirevrf\\EsbBundle\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Tests\\Monastirevrf\\EsbBundle\\": "tests/"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Сарицкий Роман Геннадьевич",
-                    "email": "saritskiy.r.mon@gmail.com"
-                }
-            ],
-            "description": "Бандл для работы с шиной",
-            "time": "2020-04-09T03:49:11+00:00"
-        },
-        {
-            "name": "monastirevrf/s3-php-sdk",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "ssh://git@git.prp.ru:7999/web/s3-php-sdk.git",
-                "reference": "9a710d1972deb8af20cf280483a83cfd8a17fa5b"
-            },
-            "require": {
-                "aws/aws-sdk-php": "^3.183"
-            },
-            "require-dev": {
-                "roave/security-advisories": "dev-latest"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Monastirevrf\\S3\\": "src/"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "PHP SDK for use S3-storage as default file storage",
-            "time": "2021-05-21T14:23:41+00:00"
-        },
-        {
-            "name": "monastirevrf/sal-bundle",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "ssh://git@git.prp.ru:7999/web/sal-bundle.git",
-                "reference": "487b95f4a507700fae88dff160b33f9b023e146f"
-            },
-            "require": {
-                "phasty/serviceclient": "1.0.6",
-                "php": "^7.2.5",
-                "symfony/event-dispatcher": "4.*|5.*",
-                "twig/twig": "^1.0||^2.0"
-            },
-            "default-branch": true,
-            "type": "bundle",
-            "autoload": {
-                "psr-4": {
-                    "Monastirevrf\\SALBundle\\": "src/"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Сарицкий Роман Геннадьевич",
-                    "email": "19128@7733.ru"
-                }
-            ],
-            "description": "Бандл абстрактного слоя сервисов",
-            "time": "2020-12-23T08:43:53+00:00"
-        },
-        {
             "name": "monolog/monolog",
             "version": "2.2.0",
             "source": {
@@ -6348,9 +6242,6 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "idimsh/php-inotify-monitor": 20,
-        "monastirevrf/esb-bundle": 20,
-        "monastirevrf/sal-bundle": 20,
-        "monastirevrf/s3-php-sdk": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
