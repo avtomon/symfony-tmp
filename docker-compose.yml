@@ -1,0 +1,18 @@
+version: '2.1'
+
+services:
+    tmp-app:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        volumes:
+            - ./:/var/www
+
+    web:
+        build:
+            context: .docker/nginx
+        volumes:
+            - ./:/var/www
+        ports:
+            - "8110:80"
+
