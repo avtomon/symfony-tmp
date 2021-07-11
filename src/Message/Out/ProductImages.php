@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace TmpApp\Message\Out;
 
 use JMS\Serializer\Annotation as JMS;
-use TmpApp\Infrastructure\Bus\Out\ImageNode;
+use TmpApp\Infrastructure\Bus\Out\FileNode;
 
 /**
  * @JMS\ExclusionPolicy("none")
- * @JMS\XmlRoot("product-images")
+ * @JMS\XmlRoot("product-files")
  */
 class ProductImages
 {
@@ -21,10 +21,10 @@ class ProductImages
 
     /**
      * @JMS\XmlList(entry="image")
-     * @JMS\Type("array<TmpApp\Infrastructure\Esb\Out\ImageNode>")
+     * @JMS\Type("array<TmpApp\Infrastructure\Esb\Out\FileNode>")
      * @JMS\Groups({"esb_out"})
      */
-    private array $images;
+    private array $files;
 
     /**
      * @return int
@@ -43,23 +43,23 @@ class ProductImages
     }
 
     /**
-     * @return ImageNode[]
+     * @return FileNode[]
      */
-    public function getImages() : array
+    public function getFiles() : array
     {
-        return $this->images;
+        return $this->files;
     }
 
     /**
-     * @param ImageNode[] $images
+     * @param FileNode[] $files
      */
-    public function setImages(array $images) : void
+    public function setFiles(array $files) : void
     {
-        $this->images = $images;
+        $this->files = $files;
     }
 
-    public function addImage(ImageNode $image): void
+    public function addFile(FileNode $file): void
     {
-        $this->images[] = $image;
+        $this->files[] = $file;
     }
 }

@@ -9,7 +9,7 @@ use JMS\Serializer\Annotation as JMS;
 /**
  * @JMS\ExclusionPolicy("none")
  */
-class ImageNode
+class FileNode
 {
     /**
      * @JMS\Type("string")

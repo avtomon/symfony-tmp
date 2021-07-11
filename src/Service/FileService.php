@@ -6,7 +6,7 @@ namespace TmpApp\Service;
 
 use TmpApp\Helper\FileFinder;
 use TmpApp\Helper\FileUrlGenerator;
-use TmpApp\Infrastructure\Bus\Out\ImageNode;
+use TmpApp\Infrastructure\Bus\Out\FileNode;
 use TmpApp\Message\Out\ProductImages;
 use SplFileInfo;
 use Symfony\Component\Finder\Finder;
@@ -37,10 +37,10 @@ class FileService
 
         $this->imageUrlGenerator->resetIndex();
         foreach ($this->imageFinder->getFiles($directory->getRealPath()) as $file) {
-            $image = new ImageNode(
+            $image = new FileNode(
                 $this->imageUrlGenerator->getImageUrlAndRenameFile($file->getRealPath(), $productName)
             );
-            $message->addImage($image);
+            $message->addFile($image);
         }
 
         return $message;
